@@ -1,7 +1,7 @@
 {
   "name": "todo-manager",
   "version": "1.0.0",
-  "description": "",
+  "description": "h",
   "main": "index.js",
   "scripts": {
     "start": "nodemon -e js,ejs",
