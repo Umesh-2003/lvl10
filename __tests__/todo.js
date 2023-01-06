@@ -17,7 +17,7 @@ const login = async (agent, username, password) => {
   res = await agent.post("/session").send({
     email: username,
     password: password,
-    _csrf: csrfToken,
+    _csrf: csrfToke,
   });
 };
 
