@@ -12,10 +12,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="./css/style.css" rel="stylesheet" />
   </head>
-  <body>
+  <body style="background-color: rgb(171, 237, 241);">
     <div class="grid grid-cols-6">
         <div class="col-start-3 col-span-2">
           <%- include("header.ejs") %> 
+          <p class="py-2"> <a href="/" class="bg-red-600 text-white px-4 py-1 rounded font-medium mr-2 mb-2" >Home page</a> </p>
           <h6 class="py-4">Signup as a new user</h6>
           <form action="/users" method="post">
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
@@ -41,7 +42,7 @@
         </form>
         <% if(messages && messages.error && messages.error.length > 0)  { %>
          <% for(var i=0; i<messages.error.length; i++) { %>
-                 <li> <%= messages.error[i] %></li>
+          <p class="bg-red-200 my-3 list-none rounded px-4 py-2"><%= messages.error[i] %></p>
          <% } %>
        <% } %>
         </div>
